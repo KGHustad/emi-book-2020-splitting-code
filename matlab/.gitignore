@@ -1,0 +1,3 @@
+*.mat
+!grandi_init.mat
+!grandi_init_Ko10.mat
