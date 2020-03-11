@@ -4,10 +4,8 @@ set -o errexit
 
 URL=https://downloads.sourceforge.net/project/viennacl/1.7.x/ViennaCL-1.7.1.tar.gz
 if [ "$(uname -s)" = "Linux" ]; then
-    echo LINUX
     wget $URL
 elif [ "$(uname -s)" = "Darwin" ]; then
-    echo MAC
     curl -OL $URL
 else
     echo "Unsupported platform"
