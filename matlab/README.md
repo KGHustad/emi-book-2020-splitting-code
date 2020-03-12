@@ -1,5 +1,5 @@
 ## Requirements
-  - MATLAB (2018a and 2019b has been tested)
+  - [MATLAB](https://www.mathworks.com/products/matlab.html) (2018a and 2019b has been tested)
   
 ## Usage
 There are two main programs:
