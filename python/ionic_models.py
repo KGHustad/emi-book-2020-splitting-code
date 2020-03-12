@@ -5,10 +5,12 @@ import numpy as np
 
 import grandi_numpy
 import util
+from lib_util import LibraryNotFoundException
+
 try:
     import grandi_c
     has_grandi_c = True
-except ImportError:
+except LibraryNotFoundException:
     has_grandi_c = False
 
 grandi_num_states = 39

@@ -20,9 +20,8 @@ import linear_solvers
 try:
     from ionic_models import Grandi_C
     has_grandi_c_solver = True
-except LibraryNotFoundException:
+except ImportError:
     has_grandi_c_solver = False
-
 
 try:
     import linear_solvers_viennacl_cpu
