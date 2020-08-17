@@ -67,7 +67,9 @@ num_ii_it = 2 # M_it
 num_ie_it = 2 # N_it
 
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(
+    formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+)
 parser.add_argument("--bc", type=str, default=bc, choices=valid_boundary_conditions, help="outer boundary condition")
 parser.add_argument("--Tstop", type=float, default=Tstop, help="end time for simulation")
 parser.add_argument("--dt", type=float, default=dt, help="main timestep")
@@ -79,7 +81,7 @@ parser.add_argument("--num_ii_it", type=int, default=num_ii_it, help="iterations
 parser.add_argument("--num_ie_it", type=int, default=num_ie_it, help="iterations for refining intracellular-extracellular coupling")
 parser.add_argument("--progress_update_period_timesteps", type=int, default=10, help="period (in number of timesteps) between progress updates")
 #parser.add_argument("--tqdm", dest='use_tqdm', action="store_true", help="use tqdm library to display a progress bar (not recommended for batch jobs)")
-parser.add_argument("--no_tqdm", dest='use_tqdm', action="store_false", help="do not use tqdm library to display a progress bar (disabling this tqdm is recommended for batch jobs)")
+parser.add_argument("--no_tqdm", dest='use_tqdm', action="store_false", help="do not use tqdm library to display a progress bar (disabling tqdm is recommended for batch jobs)")
 parser.add_argument("--plot", dest='plot', action="store_true", help="plot solution")
 #parser.add_argument("--no_plot", dest='plot', action="store_false", help="don't plot solution")
 parser.add_argument("--no_stability_check", dest='check_ionic_model_stability', action="store_false", help="do not check that the solution for the ionic model is stable (this check has a minor performance penalty)")
